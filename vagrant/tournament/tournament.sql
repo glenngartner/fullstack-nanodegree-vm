@@ -6,4 +6,10 @@
 -- You can write comments in this file by starting them with two dashes, like
 -- these lines here.
 
+DROP IF EXISTS tournament; 
 
+\c tournament
+
+CREATE TABLE Players(); 
+
+CREATE TABLE Matches(); 
