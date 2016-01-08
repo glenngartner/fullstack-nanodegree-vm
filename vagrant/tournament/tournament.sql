@@ -6,10 +6,17 @@
 -- You can write comments in this file by starting them with two dashes, like
 -- these lines here.
 
-DROP IF EXISTS tournament; 
+-- Drop the tournament database, if it exists, to eliminate error messages
+DROP DATABASE IF EXISTS tournament; 
 
+-- Create the database again
+CREATE DATABASE tournament; 
+
+-- Connect to the database
 \c tournament
 
-CREATE TABLE Players(); 
+-- Create the tables we'll use
+CREATE TABLE Players(PlayerID Int PRIMARY KEY, PlayerName VarChar, PlayerNumber Int); 
 
-CREATE TABLE Matches(); 
+CREATE TABLE Matches(MatchID Int PRIMARY KEY, MatchDate date);
+ 
